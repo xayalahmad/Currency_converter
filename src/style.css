@@ -1,0 +1,13 @@
+.inputsLabel{
+    background-color: blueviolet;
+    border-radius: 8px;
+    padding: 10px;
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 15%;
+    color: white;
+}
+.inputsLabel:hover{
+    background-color: rgb(101, 50, 148);
+}
