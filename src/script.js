@@ -47,7 +47,9 @@ for (const baseRadioButton of baseRadioButtons) {
   });
 }
 
-const SymbolsradioButtons = document.querySelectorAll('input[name="symbolsoptions"]');
+const SymbolsradioButtons = document.querySelectorAll(
+  'input[name="symbolsoptions"]'
+);
 for (const symbolsRadioButton of SymbolsradioButtons) {
   symbolsRadioButton.addEventListener("change", function () {
     console.log(this.value);

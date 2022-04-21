@@ -1,4 +1,4 @@
-.inputsLabel{
+.inputsLabel {
     background-color: blueviolet;
     border-radius: 8px;
     padding: 10px;
@@ -8,6 +8,7 @@
     width: 15%;
     color: white;
 }
-.inputsLabel:hover{
+
+.inputsLabel:hover {
     background-color: rgb(101, 50, 148);
 }
