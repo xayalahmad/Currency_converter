@@ -4,8 +4,6 @@ let symbols;
 let val;
 let baseValue;
 let symbolsValue;
-let shot;
-
 async function getInf(b = "USD", s = "RUB", val) {
   base = b;
   symbols = s;
@@ -15,9 +13,8 @@ async function getInf(b = "USD", s = "RUB", val) {
   let res = await fetch(url);
   let data = await res.json();
   console.log(data);
-  shot = data.rates[symbols];
   printVal(data.rates[symbols]);
-  printText(data.rates[symbols]);
+  printText(b, s, 1);
 }
 
 inp.addEventListener("change", function (e) {
@@ -26,20 +23,23 @@ inp.addEventListener("change", function (e) {
     maximumFractionDigits: 4,
   });
   if (val) e.target.value = formatter.format(val);
-  else e.target.value = 1;
+  else e.target.value = 0;
   getInf(baseValue, symbolsValue, val);
 });
 
 function printVal(p) {
-  document.querySelector(".mynumber").value = 1;
+  document.querySelector(".baseText").value = val;
   document.querySelector(".result").value = p;
 }
-function printText(z) {
+async function printText(b = "USD", s = "RUB", val) {
+  let url = `https://api.exchangerate.host/latest/?base=${b}&symbols=${s}&places=2&amount=${val}`;
+  let res = await fetch(url);
+  let data = await res.json();
   document.querySelector(".baseText").innerHTML = `1 ${base} = ${
-    Math.round(shot * 10000) / 10000
+    Math.round(data.rates[symbols] * 10000) / 10000
   } ${symbols}`;
   document.querySelector(".symbolsText").innerHTML = `1 ${symbols} = ${
-    Math.round((1 / shot) * 10000) / 10000
+    Math.round((1 / data.rates[symbols]) * 10000) / 10000
   } ${base}`;
 }
 
@@ -61,3 +61,5 @@ for (const symbolsRadioButton of SymbolsradioButtons) {
     getInf(base, symbolsValue, val);
   });
 }
+
+window.open(getInf("USD", "RUB", "1"));

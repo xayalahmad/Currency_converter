@@ -5,66 +5,117 @@
   <meta charset="UTF-8" />
   <title>xxx</title>
   <link rel="stylesheet" href="./src/reset.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
-    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous" />
-  <link rel="stylesheet" href="./src/style.css" />
+
+  <link rel="stylesheet" href="./src/style.css">
 </head>
 
 <body>
-  <input type="text" class="mynumber" /> <br />
-  <div class="baseText"></div>
+  <nav class="">
+    <div class="navBarFlexContainer">
+      <img src="./img/logo.svg" alt="">
 
-  <div class="btn-group btn-group-toggle mt-2" data-toggle="buttons">
-    <label class="btn inputsLabel active">
-      <input value="USD" type="radio" name="baseoptions" id="option1" />
-      USD
-    </label>
-    <label class="btn inputsLabel">
-      <input value="RUB" type="radio" name="baseoptions" id="option2" />
-      RUB
-    </label>
-    <label class="btn inputsLabel">
-      <input value="EUR" type="radio" name="baseoptions" id="option3" />
-      EUR
-    </label>
-    <label class="btn inputsLabel">
-      <input value="GBP" type="radio" name="baseoptions" id="option3" />
-      GBP
-    </label>
+      <div class="d-flex justify-content-between mr-5" id="navbarNav">
+        <ul class="navBarUlTag">
+          <li class="nav-item ml-2 mr-2">
+            <a class="nav-link active" href="#">БАНК</a>
+          </li>
+          <li class="nav-item ml-2 mr-2">
+            <a class="nav-link" href="#">БИЗНЕС</a>
+          </li>
+          <li class="nav-item ml-2 mr-2">
+            <a class="nav-link" href="#">ИНВЕСТИЦИИ</a>
+          </li>
+          <li class="nav-item ml-2 mr-2">
+            <a class="nav-link" href="#>СТРАХОВАНИЕ</a>
+                    </li>
+                    <li class=" nav-item ml-2 mr-2">
+              <a class="nav-link" href="#">МОБАЙЛ</a>
+          </li>
+          <li class="nav-item ml-2 mr-2">
+            <a class="nav-link" href="#">ПУТЕШЕСТВИЯ</a>
+          </li>
+          <li class="nav-item ml-2 mr-2">
+            <a class="nav-link" href="#">РАЗВЛЕЧЕНИЯ</a>
+          </li>
+        </ul>
+      </div>
+      <a class="navBarButton" href="#">ВОЙТИ</a>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="convertTitle">Конвертер валют онлайн</div>
+  <div class="convertContainersBig">
+
+  </div>
+  <div class="container convertContainers">
+
+
+    <div class="currencySections">
+      <div class="boxTitle">У меня есть</div>
+      <div class="inputsContainer" data-toggle="buttons">
+        <label class="btn inputsLabel">
+          <input  value="USD" type="radio" name="baseoptions" id="option1" />
+          USD
+        </label>
+        <label class="btn inputsLabel">
+          <input  value="RUB" type="radio" name="baseoptions" id="option2" />
+          RUB
+        </label>
+        <label class="btn inputsLabel">
+          <input  value="EUR" type="radio" name="baseoptions" id="option3" />
+          EUR
+        </label>
+        <label class="btn inputsLabel">
+          <input  value="GBP" type="radio" name="baseoptions" id="option3" />
+          GBP
+        </label>
+      </div>
+      <div class="costContainer">
+        <input value="1" type="text" class="mynumber" /> <br />
+        <div class="baseText"></div>
+      </div>
+    </div>
+
+    <div class="currencySections">
+      <div class="boxTitle">Хочу приобрестиь</div>
+      <div class="inputsContainer" data-toggle="buttons">
+        <label class="btn inputsLabel active">
+          <input value="USD" type="radio" name="symbolsoptions" id="option1" />
+          USD
+        </label>
+        <label class="btn inputsLabel">
+          <input value="RUB" type="radio" name="symbolsoptions" id="option2" />
+          RUB
+        </label>
+        <label class="btn inputsLabel">
+          <input value="EUR" type="radio" name="symbolsoptions" id="option3" />
+          EUR
+        </label>
+        <label class="btn inputsLabel">
+          <input value="GBP" type="radio" name="symbolsoptions" id="option3" />
+          GBP
+        </label>
+      </div>
+      <div class="costContainer">
+        <input class="result" />
+        <div class="symbolsText"></div>
+      </div>
+    </div>
   </div>
 
-  <br />
 
-  <div class="btn-group btn-group-toggle mb-2 mt-5" data-toggle="buttons">
-    <label class="btn inputsLabel active">
-      <input value="USD" type="radio" name="symbolsoptions" id="option1" />
-      USD
-    </label>
-    <label class="btn inputsLabel">
-      <input value="RUB" type="radio" name="symbolsoptions" id="option2" />
-      RUB
-    </label>
-    <label class="btn inputsLabel">
-      <input value="EUR" type="radio" name="symbolsoptions" id="option3" />
-      EUR
-    </label>
-    <label class="btn inputsLabel">
-      <input value="GBP" type="radio" name="symbolsoptions" id="option3" />
-      GBP
-    </label>
+
   </div>
-
-  <br />
-
-  <div class="symbolsText"></div>
-  <input class="result" />
-
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
-  </script>
   <script src="./src/script.js"></script>
 </body>
 
