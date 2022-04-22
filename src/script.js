@@ -4,6 +4,8 @@ let symbols;
 let val;
 let baseValue;
 let symbolsValue;
+let shot;
+
 async function getInf(b = "USD", s = "RUB", val) {
   base = b;
   symbols = s;
@@ -13,6 +15,7 @@ async function getInf(b = "USD", s = "RUB", val) {
   let res = await fetch(url);
   let data = await res.json();
   console.log(data);
+  shot = data.rates[symbols];
   printVal(data.rates[symbols]);
   printText(data.rates[symbols]);
 }
@@ -23,19 +26,20 @@ inp.addEventListener("change", function (e) {
     maximumFractionDigits: 4,
   });
   if (val) e.target.value = formatter.format(val);
-  else e.target.value = 0;
+  else e.target.value = 1;
   getInf(baseValue, symbolsValue, val);
 });
 
 function printVal(p) {
+  document.querySelector(".mynumber").value = 1;
   document.querySelector(".result").value = p;
 }
 function printText(z) {
   document.querySelector(".baseText").innerHTML = `1 ${base} = ${
-    Math.round((val / z) * 10000) / 10000
+    Math.round(shot * 10000) / 10000
   } ${symbols}`;
   document.querySelector(".symbolsText").innerHTML = `1 ${symbols} = ${
-    Math.round((z / val) * 10000) / 10000
+    Math.round((1 / shot) * 10000) / 10000
   } ${base}`;
 }
 
