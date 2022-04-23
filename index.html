@@ -3,14 +3,14 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>xxx</title>
+  <title>Converter</title>
   <link rel="stylesheet" href="./src/reset.css" />
 
   <link rel="stylesheet" href="./src/style.css">
 </head>
 
 <body>
-  <nav class="">
+  <nav class="nav1">
     <div class="navBarFlexContainer">
       <img src="./img/logo.svg" alt="">
 
@@ -44,6 +44,42 @@
   </nav>
 
 
+  <nav class="nav2">
+    <div class="navBarFlexContainerColumn">
+      <div class="nav2UpSection">
+        <img src="./img/logo.svg" alt="">
+        <a class="navBarButton" href="#">ВОЙТИ</a>
+      </div>
+
+      <div class="" id="navbarNav">
+        <ul class="navBar2UlTag">
+          <li class="nav-item ml-2 mr-2">
+            <a class="nav-link active" href="#">БАНК</a>
+          </li>
+          <li class="nav-item ml-2 mr-2">
+            <a class="nav-link" href="#">БИЗНЕС</a>
+          </li>
+          <li class="nav-item ml-2 mr-2">
+            <a class="nav-link" href="#">ИНВЕСТИЦИИ</a>
+          </li>
+          <li class="nav-item ml-2 mr-2">
+            <a class="nav-link" href="#>СТРАХОВАНИЕ</a>
+                    </li>
+                    <li class=" nav-item ml-2 mr-2">
+              <a class="nav-link" href="#">МОБАЙЛ</a>
+          </li>
+          <li class="nav-item ml-2 mr-2">
+            <a class="nav-link" href="#">ПУТЕШЕСТВИЯ</a>
+          </li>
+          <li class="nav-item ml-2 mr-2">
+            <a class="nav-link" href="#">РАЗВЛЕЧЕНИЯ</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
 
 
 
@@ -57,26 +93,27 @@
   <div class="convertContainersBig">
 
   </div>
-  <div class="container convertContainers">
+  <!-- <div class="container convertContainers"> -->
 
+    <form id="converter-form" class="container convertContainers">
 
     <div class="currencySections">
       <div class="boxTitle">У меня есть</div>
       <div class="inputsContainer" data-toggle="buttons">
-        <label class="btn inputsLabel">
-          <input  value="USD" type="radio" name="baseoptions" id="option1" />
+        <input  value="USD" type="radio" name="baseoptions" id="usd-from" checked/>
+        <label for="usd-from" class="btn inputsLabel">
           USD
         </label>
-        <label class="btn inputsLabel">
-          <input  value="RUB" type="radio" name="baseoptions" id="option2" />
+        <input  value="RUB" type="radio" name="baseoptions" id="rub-from" />
+        <label for="rub-from" class="btn inputsLabel">
           RUB
         </label>
-        <label class="btn inputsLabel">
-          <input  value="EUR" type="radio" name="baseoptions" id="option3" />
+        <input  value="EUR" type="radio" name="baseoptions" id="eur-from" />
+        <label for="eur-from" class="btn inputsLabel">
           EUR
         </label>
-        <label class="btn inputsLabel">
-          <input  value="GBP" type="radio" name="baseoptions" id="option3" />
+        <input  value="GBP" type="radio" name="baseoptions" id="gbp-from" />
+        <label for="gbp-from" class="btn inputsLabel">
           GBP
         </label>
       </div>
@@ -89,20 +126,20 @@
     <div class="currencySections">
       <div class="boxTitle">Хочу приобрестиь</div>
       <div class="inputsContainer" data-toggle="buttons">
-        <label class="btn inputsLabel active">
-          <input value="USD" type="radio" name="symbolsoptions" id="option1" />
+        <input value="USD" type="radio" name="symbolsoptions" id="usd-tu" />
+        <label for="usd-tu" class="btn inputsLabel">
           USD
         </label>
-        <label class="btn inputsLabel">
-          <input value="RUB" type="radio" name="symbolsoptions" id="option2" />
+        <input value="RUB" type="radio" name="symbolsoptions" id="rub-tu" />
+        <label for="rub-tu" class="btn inputsLabel">
           RUB
         </label>
-        <label class="btn inputsLabel">
-          <input value="EUR" type="radio" name="symbolsoptions" id="option3" />
+        <input value="EUR" type="radio" name="symbolsoptions" id="eur-tu" />
+        <label for="eur-tu" class="btn inputsLabel">
           EUR
         </label>
-        <label class="btn inputsLabel">
-          <input value="GBP" type="radio" name="symbolsoptions" id="option3" />
+        <input value="GBP" type="radio" name="symbolsoptions" id="gbp-tu" />
+        <label for="gbp-tu" class="btn inputsLabel">
           GBP
         </label>
       </div>
@@ -111,7 +148,9 @@
         <div class="symbolsText"></div>
       </div>
     </div>
-  </div>
+  </form>
+
+  <!-- </div> -->
 
 
 

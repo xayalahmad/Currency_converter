@@ -15,13 +15,13 @@ async function getInf(b = "USD", s = "RUB", val) {
   printVal(data.rates[symbols]);
   printText(b, s, 1);
 }
-inp.addEventListener("change", function (e) {
+inp.addEventListener("input", function (e) {
   val = parseFloat(e.target.value.replace(/,/g, ""));
-  const formatter = new Intl.NumberFormat(undefined, {
-    maximumFractionDigits: 4,
-  });
-  if (val) e.target.value = formatter.format(val);
-  else e.target.value = 0;
+  // const formatter = new Intl.NumberFormat(undefined, {
+  //   maximumFractionDigits: 4,
+  // });
+  // if (val) e.target.value = formatter.format(val);
+  // else e.target.value = 0;
   getInf(baseValue, symbolsValue, val);
 });
 function printVal(p) {
