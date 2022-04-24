@@ -229,12 +229,7 @@ margin: auto;
     cursor: pointer;
 }
 
-.navBar2UlTag::-webkit-scrollbar {
-    /* display: none; */
-  }
-  
-  /* Demonstrate a "mostly customized" scrollbar
-   * (won't be visible otherwise if width/height is specified) */
+
   .navBar2UlTag::-webkit-scrollbar {
     width: 0;
     height: 8px;
