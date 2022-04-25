@@ -90,7 +90,9 @@ nav img {
 
 .currencySections {
     margin-right: auto;
-    width: 40%;
+    width: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .currencySections>label {
@@ -249,7 +251,7 @@ margin: auto;
 
 
 
-@media only screen and (max-width: 765px)  {
+@media only screen and (max-width: 800px)  {
     .convertTitle {
         margin-top: 30px;
     }
