@@ -256,12 +256,7 @@ margin: auto;
     .convertContainers{
         flex-direction: column;
     }
-    /* .nav1{
-        display: none;
-    }
-    .nav2{
-        display: block;
-    } */
+
     .convertTitle{
         width: 80%;
     }
